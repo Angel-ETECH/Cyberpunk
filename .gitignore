@@ -1,0 +1,25 @@
+# Archivos generados al compilar y depurar
+*.exe
+!portable/EDGERUNNER.exe
+*.pdb
+*.obj
+*.log
+*.tmp
+*.zip
+bin/
+obj/
+.vs/
+.vscode/
+
+# Resultados de pruebas y preferencias locales
+settings.xml
+settings-test.xml
+desktop-state.txt
+desktop-render.png
+vista-previa.txt
+preview.png
+preview.txt
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini
