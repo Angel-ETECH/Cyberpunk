@@ -1,5 +1,27 @@
 # Cyberpunk · EDGERUNNER Nightfall
 
+### Versión 0.3 · Media Link
+
+Diseño inspirado en un HUD cyberpunk: enfoque circular, esquema neural decorativo, mapa isométrico visual y panel multimedia central, sin título grande en medio.
+
+El panel lee la sesión multimedia compartida con Windows: título, artista, carátula cuando esté disponible, estado y progreso. Funciona con las aplicaciones y páginas que integran los controles multimedia del sistema; no puede obtener metadatos de cualquier sonido o página que no los publique. El menú E permite anterior, reproducir/pausar y siguiente, cuando la sesión lo admite. En la vista previa también hay botones.
+
+Las barras responden al pico real de salida del dispositivo de audio predeterminado. Su silueta es decorativa: representan amplitud, no un análisis de frecuencias FFT. No se graba ni se almacena audio. Un reproductor puede publicar metadatos mientras está pausado; en ese caso se conserva la canción y aparece «En pausa».
+
+En Personalizar puedes ocultar la música y el medidor. Los datos multimedia se consultan localmente mediante Windows Media Control, sin iniciar sesión ni instalar extensiones. El mapa y el esquema neural son gráficos decorativos; no representan ubicación real, temperatura, seguridad ni actividad cerebral.
+
+La compilación usa además `source/Media.cs`, los metadatos WinRT de Windows en `System32/WinMetadata` y la referencia System.Runtime de .NET Framework. Todos estaban presentes en el equipo de desarrollo; no se agregaron paquetes externos al ejecutable.
+
+Referencia de la integración: [Windows Media Control](https://learn.microsoft.com/en-us/uwp/api/windows.media.control.globalsystemmediatransportcontrolssessionmanager).
+
+### Versión 0.2 · Neural Desktop
+
+Interfaz HUD con marcos angulares, paneles numerados y acentos neón. Añade historial real de CPU (hasta 60 muestras), transferencia de red, tiempo desde el arranque, sesiones de enfoque de 25 minutos y un acceso rápido configurable.
+
+**Controles nuevos:** en el icono E puedes iniciar, pausar o reiniciar el enfoque. En **Personalizar → Elegir acceso rápido** seleccionas una aplicación o archivo existente; después lo abres desde el menú E. Los paneles del fondo muestran información; las acciones se controlan desde la bandeja.
+
+El enfoque avisa al terminar mientras la aplicación está abierta. No bloquea programas y se reinicia si cierras la aplicación. El tiempo desde el arranque incluye suspensión y puede conservarse entre apagados si Windows usa Inicio rápido. La tasa de red mide la suma de bytes de interfaces activas (puede incluir adaptadores virtuales), no la velocidad contratada de Internet. La gráfica se llena con muestras reales a medida que la aplicación funciona.
+
 Una aplicación portable que convierte el escritorio de Windows 11 en una ciudad cyberpunk con lluvia animada, reloj y paneles con datos reales del equipo.
 
 ![Vista previa de la interfaz](docs/vista-previa.png)
